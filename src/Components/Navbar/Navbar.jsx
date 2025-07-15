@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from "../../assets/logo.png";
+import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,9 @@ export default function Navbar() {
               <button className="text-green-400 hover:text-green-300 font-medium">
                 BECOME A SELLER
               </button>
-              <button className="text-gray-300 hover:text-white">LOGIN</button>
+               <NavLink to="/login" className="text-gray-300 hover:text-white text-left">
+                LOGIN
+              </NavLink>
               <button className="bg-button-color hover:bg-green-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                 Registration
               </button>
@@ -72,9 +75,9 @@ export default function Navbar() {
               <button className="text-green-400 hover:text-green-300 font-medium text-left">
                 BECOME A SELLER
               </button>
-              <button className="text-gray-300 hover:text-white text-left">
+              <NavLink to="/login" className="text-gray-300 hover:text-white text-left">
                 LOGIN
-              </button>
+              </NavLink>
               <button className="bg-button-color hover:bg-green-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
                 Registration
               </button>
